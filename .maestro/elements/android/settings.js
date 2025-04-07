@@ -4,6 +4,7 @@ output.settingsScreen = {
     headerText: "Settings",
     headerTextIndex: "1",
     darkModeText: "Dark Mode",
-    darkModeToggle: "89%,24%",
+    darkModeToggleOff: "toggleOff",
+    darkModeToggleOn: "toggleOn",
     logoutBtn: "Logout"
 }

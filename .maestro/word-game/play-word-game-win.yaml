@@ -1,0 +1,61 @@
+appId: com.testengtakehome.app
+---
+- tapOn: "C"
+- tapOn: "R"
+- tapOn: "A"
+- tapOn: "N"
+- tapOn: "E"
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+        id: "C present"
+- assertVisible:
+        id: "R present"
+- assertVisible:
+        id: "A correct"
+- assertVisible:
+        id: "N absent"
+- assertVisible:
+        id: "E present"
+
+- tapOn: "B"
+- tapOn: "L"
+- tapOn:
+      text: "A"
+      index: 1
+- tapOn: "S"
+- tapOn: "T"
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+        id: "B absent"
+- assertVisible:
+        id: "L absent"
+- assertVisible:
+        id: "A correct"
+- assertVisible:
+        id: "S absent"
+- assertVisible:
+        id: "T correct"
+
+- tapOn:
+      text: "R"
+      index: 1
+- tapOn:
+      text: "E"
+      index: 1
+- tapOn:
+      text: "A"
+      index: 2
+- tapOn:
+      text: "C"
+      index: 1
+- tapOn:
+      text: "T"
+      index: 1
+
+# assert win message
+- assertVisible: ${output.wordGameScreen.gameWinMsg}
+- assertVisible: ${output.wordGameScreen.answer}
+- assertVisible: ${output.wordGameScreen.playAgainBtn}
+- tapOn: ${output.wordGameScreen.playAgainBtn}

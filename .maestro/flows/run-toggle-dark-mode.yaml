@@ -8,12 +8,11 @@ onFlowComplete:
   - runFlow:
       file: ../setup/tear-down.yaml
 ---
-# Verify user can toggle on/off dark mode
+# Verify user can toggle on dark mode
 - runFlow:
       file: ../word-game/navigate-settings.yaml
 - runFlow:
-      file: ../settings/toggle-dark-mode.yaml
-# to-do: add assertion for dark mode
-# toggle back to default mode
+      file: ../settings/toggle-dark-mode-on.yaml
+# toggle dark mode back off
 - runFlow:
-    file: ../settings/toggle-dark-mode.yaml
+    file: ../settings/toggle-dark-mode-off.yaml

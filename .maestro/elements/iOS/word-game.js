@@ -12,6 +12,6 @@ output.wordGameScreen = {
     deleteBtn: "← Delete",
     gameLoseMsg: "Game Over",
     gameWinMsg: "You Win!",
-    answer: "The word was .*",
+    answer: "The word was REACT",
     playAgainBtn: "Play Again"
 }

@@ -11,15 +11,15 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const WORDS = [
   "REACT",
-  "APPLE",
-  "NODES",
-  "INPUT",
-  "STACK",
-  "CRANE",
-  "BLAST",
-  "ROUTE",
-  "TIMER",
-  "PLANT",
+//   "APPLE",
+//   "NODES",
+//   "INPUT",
+//   "STACK",
+//   "CRANE",
+//   "BLAST",
+//   "ROUTE",
+//   "TIMER",
+//   "PLANT",
 ];
 
 const WORD_OF_THE_DAY = WORDS[Math.floor(Math.random() * WORDS.length)];
@@ -140,6 +140,7 @@ export default function WordleScreen() {
                 return (
                   <View
                     key={colIdx}
+                    testID={status === "correct"? `${char} correct`: status === "present"? `${char} present`: status === "absent"? `${char} absent`: `empty`}
                     style={[
                       styles.letterBox,
                       status === "correct" && styles.correct,

@@ -1,0 +1,7 @@
+appId: com.testengtakehome.app
+---
+# toggle dark mode off
+- tapOn:
+    id: ${output.settingsScreen.darkModeToggleOn}
+- assertVisible:
+      id: ${output.settingsScreen.darkModeToggleOff}

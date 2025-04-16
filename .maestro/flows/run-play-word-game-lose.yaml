@@ -1,0 +1,15 @@
+appId: com.testengtakehome.app
+onFlowStart:
+  - runFlow:
+      file: ../setup/setup.yaml
+      env:
+        LOGIN: "YES"
+onFlowComplete:
+  - runFlow:
+      file: ../setup/tear-down.yaml
+      env:
+        GO_TO_SETTINGS: "YES"
+---
+# Verify test case where user does not guess word correctly after max number of 6 tries
+- runFlow:
+    file: ../word-game/play-word-game-lose.yaml

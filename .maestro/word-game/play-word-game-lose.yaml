@@ -1,0 +1,136 @@
+appId: com.testengtakehome.app
+---
+- tapOn: "A"
+- tapOn: "P"
+- tapOn:
+    text: "P"
+    index: 1
+- tapOn: "L"
+- tapOn: "E"
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+        id: "A present"
+- assertVisible:
+        id: "P absent"
+- assertVisible:
+        id: "P absent"
+- assertVisible:
+        id: "L absent"
+- assertVisible:
+        id: "E present"
+
+- tapOn: "S"
+- tapOn: "T"
+- tapOn:
+      text: "A"
+      index: 1
+- tapOn: "C"
+- tapOn: "K"
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+        id: "S absent"
+- assertVisible:
+        id: "T present"
+- assertVisible:
+        id: "A correct"
+- assertVisible:
+        id: "C correct"
+- assertVisible:
+        id: "K absent"
+
+- tapOn:
+      text: "C"
+      index: 1
+- tapOn: "R"
+- tapOn:
+      text: "A"
+      index: 2
+- tapOn: "N"
+- tapOn:
+      text: "E"
+      index: 1
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+        id: "C present"
+- assertVisible:
+        id: "R present"
+- assertVisible:
+        id: "A correct"
+- assertVisible:
+        id: "N absent"
+- assertVisible:
+        id: "E present"
+
+- tapOn:
+    text: "R"
+    index: 1
+- tapOn: "O"
+- tapOn: "U"
+- tapOn:
+    text: "T"
+    index: 1
+- tapOn:
+    text: "E"
+    index: 2
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+    id: "R correct"
+- assertVisible:
+    id: "O absent"
+- assertVisible:
+    id: "U absent"
+- assertVisible:
+    id: "T present"
+- assertVisible:
+    id: "E present"
+
+- tapOn:
+    text: "T"
+    index: 2
+- tapOn: "I"
+- tapOn: "M"
+- tapOn:
+    text: "E"
+    index: 3
+- tapOn:
+    text: "R"
+    index: 2
+- tapOn: "⏎ Submit"
+
+- assertVisible:
+    id: "T present"
+- assertVisible:
+    id: "I absent"
+- assertVisible:
+    id: "M absent"
+- assertVisible:
+    id: "E present"
+- assertVisible:
+    id: "R present"
+
+- tapOn:
+    text: "R"
+    index: 3
+- tapOn:
+    text: "A"
+    index: 3
+- tapOn:
+    text: "C"
+    index: 2
+- tapOn:
+    text: "E"
+    index: 4
+- tapOn:
+    text: "R"
+    index: 4
+- tapOn: "⏎ Submit"
+
+# assert lose messages
+- assertVisible: ${output.wordGameScreen.gameLoseMsg}
+- assertVisible: ${output.wordGameScreen.answer}
+- assertVisible: ${output.wordGameScreen.playAgainBtn}
+- tapOn: ${output.wordGameScreen.playAgainBtn}
